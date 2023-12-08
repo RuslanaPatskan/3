@@ -1,0 +1,16 @@
+import random
+
+def find_word_starting_with_k(sentence):
+    words = sentence.split()
+    k_words = [word for word in words if word.startswith('к')]
+    
+    if k_words:
+        random_k_word = random.choice(k_words)
+        return random_k_word
+    else:
+        return "Слова, що починаються на 'к', не знайдено у реченні."
+
+given_sentence = input("Введіть речення: ")
+
+result = find_word_starting_with_k(given_sentence)
+print("Слово, що починається з 'к':", result)
